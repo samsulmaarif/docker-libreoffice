@@ -1,11 +1,15 @@
 # LibreOffice
 
-Unofficial build of LibreOffice 5.3.4 running within a docker container and
+Unofficial build of LibreOffice 6.0.0 running within a docker container and
 rendered by the local X Server.
 
 ## Changelog
 
 ```
+v1.7
+* Update base image to Ubuntu 16.04
+* Update image to Libreoffice 6.0.0
+
 v1.6
 * Updated image to LibreOffice 5.3.4.
 
