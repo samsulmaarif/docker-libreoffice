@@ -24,6 +24,6 @@ RUN wget -q http://kambing.ui.ac.id/tdf/libreoffice/testing/$LOVERSION/deb/x86_6
     && rm -f /tmp/$LIBREOFFICEPACKAGE \
     && rm -rf /tmp/LibreOffice
 
-COPY start-libreoffice.sh /tmp/
+COPY start-libreoffice.sh /
 
-ENTRYPOINT ["/tmp/start-libreoffice.sh"]
+ENTRYPOINT ["/start-libreoffice.sh"]
