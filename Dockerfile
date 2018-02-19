@@ -15,7 +15,7 @@ RUN useradd -m libreoffice; \
                                                   openjdk-8-jre \
     && rm -rf /var/lib/apt/lists/*
 
-ENV LIBREOFFICEPACKAGE LibreOffice_$LOVERSION_Linux_x86-64_deb.tar.gz
+ENV LIBREOFFICEPACKAGE LibreOffice_"$LOVERSION"_Linux_x86-64_deb.tar.gz
 ENV LIBREOFFICEDIR LibreOffice_"$LOVERSION"."$REV"_Linux_x86-64_deb
 
 WORKDIR /tmp
