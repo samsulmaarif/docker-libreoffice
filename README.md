@@ -2,14 +2,17 @@
 
 [LibreOffice](https://www.libreoffice.org/discover/libreoffice/) is a powerful office suite – its clean interface and feature-rich tools help you unleash your creativity and enhance your productivity. LibreOffice includes several applications that make it the most powerful Free and Open Source office suite on the market: Writer (word processing), Calc (spreadsheets), Impress (presentations), Draw (vector graphics and flowcharts), Base (databases), and Math (formula editing).
 
-This is unofficial build of LibreOffice 6.0.0 running within a docker container and rendered by the local X Server.
+This is unofficial build of LibreOffice 6.0.1 running within a docker container and rendered by the local X Server.
 
 ## Changelog
 
 ```
+v1.8
+* Update image to LibreOffice 6.0.1
+
 v1.7
 * Update base image to Ubuntu 16.04
-* Update image to Libreoffice 6.0.0
+* Update image to LibreOffice 6.0.0
 
 v1.6
 * Updated image to LibreOffice 5.3.4.
@@ -34,6 +37,13 @@ v1.0
   LibreOffice documents to be saved back to the host system by passing in the
   local users uid/gid as environment variables.
 ```
+
+## Pull from Docker Registry
+
+```
+docker pull samsulmaarif/docker-libreoffice
+```
+
 
 ## Launch Command
 

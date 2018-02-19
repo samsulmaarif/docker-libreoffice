@@ -3,8 +3,8 @@ FROM ubuntu:16.04
 MAINTAINER Samsul Ma'arif <mail@samsul.web.id>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV LOVERSION 6.0.0
-ENV REV 3
+ENV LOVERSION 6.0.1
+ENV REV 1
 
 
 RUN useradd -m libreoffice; \
@@ -16,10 +16,12 @@ RUN useradd -m libreoffice; \
     && rm -rf /var/lib/apt/lists/*
 
 ENV LIBREOFFICEPACKAGE LibreOffice_$LOVERSION_Linux_x86-64_deb.tar.gz
-ENV LIBREOFFICEDIR LibreOffice_$LOVERSION.$REV_Linux_x86-64_deb
+ENV LIBREOFFICEDIR LibreOffice_"$LOVERSION"."$REV"_Linux_x86-64_deb
 
-RUN wget -q http://kambing.ui.ac.id/tdf/libreoffice/testing/$LOVERSION/deb/x86_64/LibreOffice_$LOVERSION.$REV_Linux_x86-64_deb.tar.gz -O /tmp/$LIBREOFFICEPACKAGE \
-    && mkdir /tmp/LibreOffice \
+WORKDIR /tmp
+
+RUN wget -c http://download.documentfoundation.org/libreoffice/stable/$LOVERSION/deb/x86_64/LibreOffice_"$LOVERSION"_Linux_x86-64_deb.tar.gz -O /tmp/$LIBREOFFICEPACKAGE
+RUN mkdir /tmp/LibreOffice \
     && tar -xzf /tmp/$LIBREOFFICEPACKAGE -C /tmp/LibreOffice \
     && dpkg -i /tmp/LibreOffice/$LIBREOFFICEDIR/DEBS/*.deb \
     && rm -f /tmp/$LIBREOFFICEPACKAGE \
