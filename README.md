@@ -7,6 +7,9 @@ This is unofficial build of LibreOffice 6.0.1 running within a docker container 
 ## Changelog
 
 ```
+v1.9
+* Update image to LibreOffice 6.0.2
+
 v1.8
 * Update image to LibreOffice 6.0.1
 

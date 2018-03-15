@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Samsul Ma'arif <mail@samsul.web.id>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV LOVERSION 6.0.1
+ENV LOVERSION 6.0.2
 ENV REV 1
 
 
@@ -13,7 +13,8 @@ RUN useradd -m libreoffice; \
                                                   libdbus-glib-1-2 \
                                                   libsm6 \
                                                   openjdk-8-jre \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/cache/apt/archives/*
 
 ENV LIBREOFFICEPACKAGE LibreOffice_"$LOVERSION"_Linux_x86-64_deb.tar.gz
 ENV LIBREOFFICEDIR LibreOffice_"$LOVERSION"."$REV"_Linux_x86-64_deb
